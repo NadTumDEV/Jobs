@@ -1,0 +1,4 @@
+name: Jobs
+version: '${project.version}'
+main: be.nadtum.jobs.Jobs
+api-version: 1.19
