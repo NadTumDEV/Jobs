@@ -1,5 +1,6 @@
 package be.nadtum.jobs.Builder;
 
+import be.nadtum.jobs.Jobs;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 
@@ -12,7 +13,7 @@ public class ConnectionBuilder {
     private static Connection connection;
 
     //methode
-    public static void setupConnection(FileConfiguration configuration){
+    public static Connection setupConnection(FileConfiguration configuration){
 
         try {
             connection = DriverManager.getConnection(
@@ -23,11 +24,11 @@ public class ConnectionBuilder {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        //commit
+        return connection;
     }
 
     public static Connection getConnection() {
-        return connection;
+        return connection == null ? setupConnection(Jobs.getINSTANCE().getConfig()) : connection;
     }
 
 

@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fe1b7-1cb7-41fb-beac-e0a38794a79b" name="Changes" comment="start commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Fish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Kill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Mine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/RewardBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/StainBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Mission/MissionBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+    <list default="true" id="2f5fe1b7-1cb7-41fb-beac-e0a38794a79b" name="Changes" comment="add constructor project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Fish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Kill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Kill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Mine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Mine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Jobs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Jobs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -39,14 +40,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "NadTum",
+    "last_opened_file_path": "C:/Users/akian/OneDrive/Bureau/Minecraft/Projets/Minecraft/Plugin/Jobs",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Jobs package" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -92,6 +94,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start commit" />
