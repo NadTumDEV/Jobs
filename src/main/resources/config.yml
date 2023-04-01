@@ -1,0 +1,7 @@
+database_data:
+  type: MySql
+  use: false
+  address: address_database
+  user: user
+  password: password
+  nameBD: nameBD
