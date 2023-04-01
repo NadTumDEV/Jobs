@@ -1,12 +1,18 @@
 package be.nadtum.jobs;
 
+import be.nadtum.jobs.Builder.ConnectionBuilder;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Jobs extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+
+        //setup file config
+        saveDefaultConfig();
+
+        //setup connection to database
+        ConnectionBuilder.setupConnection(getConfig());
 
     }
 
