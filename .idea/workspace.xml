@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2f5fe1b7-1cb7-41fb-beac-e0a38794a79b" name="Changes" comment="add constructor project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Fish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Kill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Kill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Mine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Mine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Jobs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Jobs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +23,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="NadTum" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/Mine.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "NadTum",
     "last_opened_file_path": "C:/Users/akian/OneDrive/Bureau/Minecraft/Projets/Minecraft/Plugin/Jobs",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate"
   }
 }]]></component>
   <component name="RunManager">
@@ -109,5 +108,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start commit" />
     <option name="LAST_COMMIT_MESSAGE" value="start commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

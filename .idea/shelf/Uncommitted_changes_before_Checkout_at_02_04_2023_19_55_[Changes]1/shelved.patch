@@ -1,0 +1,18 @@
+Index: src/main/java/be/nadtum/jobs/Action/Mine.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package be.nadtum.jobs.Action;\r\n\r\nimport org.bukkit.block.Block;\r\nimport org.bukkit.entity.Player;\r\nimport org.bukkit.event.EventHandler;\r\nimport org.bukkit.event.Listener;\r\nimport org.bukkit.event.block.BlockBreakEvent;\r\n\r\npublic class Mine implements Listener {\r\n\r\n    @EventHandler\r\n    public void PlayerBreakBlock(BlockBreakEvent event){\r\n\r\n        Player player = event.getPlayer();\r\n        Block block = event.getBlock();\r\n        Integer expToDrop = event.getExpToDrop();\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/be/nadtum/jobs/Action/Mine.java b/src/main/java/be/nadtum/jobs/Action/Mine.java
+--- a/src/main/java/be/nadtum/jobs/Action/Mine.java	
++++ b/src/main/java/be/nadtum/jobs/Action/Mine.java	
+@@ -14,7 +14,6 @@
+         Player player = event.getPlayer();
+         Block block = event.getBlock();
+         Integer expToDrop = event.getExpToDrop();
+-
+     }
+ 
+ }
