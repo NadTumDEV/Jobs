@@ -14,11 +14,15 @@ public final class Jobs extends JavaPlugin {
     @Override
     public void onEnable() {
 
+        INSTANCE = this;
+
         //setup file config
         saveDefaultConfig();
 
         //setup connection to database
         ConnectionBuilder.setupConnection(getConfig());
+
+        new Listeners(this);
 
     }
 
