@@ -1,8 +1,5 @@
 package be.nadtum.jobs.Mission;
 
-import be.nadtum.jobs.Builder.RewardBuilder;
-import be.nadtum.jobs.Builder.StainBuilder;
-
 import java.util.List;
 
 public class MissionBuilder {

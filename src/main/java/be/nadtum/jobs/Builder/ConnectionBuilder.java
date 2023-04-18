@@ -28,6 +28,9 @@ public class ConnectionBuilder {
     }
 
     public static Connection getConnection() {
+
+
+
         return connection == null ? setupConnection(Jobs.getINSTANCE().getConfig()) : connection;
     }
 

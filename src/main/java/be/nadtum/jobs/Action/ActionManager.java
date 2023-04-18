@@ -6,7 +6,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
+import org.bukkit.entity.Ageable;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
@@ -22,37 +24,40 @@ public class ActionManager implements Listener {
     private final HashMap<UUID, BossBar> bossBarPlayer = new HashMap<>();
 
     //setup event
+    @EventHandler
     public void BreakBlock(BlockBreakEvent event) throws SQLException {
-        scalingXp(event.getPlayer(), event.getBlock().getType().toString().toLowerCase(), "JOBS_BLOCKS_DATA");
+        scalingXp(event.getPlayer(), event.getBlock().getType().toString().toLowerCase(), "JOBS_BLOCKS_DATA", "BLOCK_NAME");
     }
 
+    @EventHandler
     public void KillEntity(EntityDeathEvent event) throws SQLException {
-        scalingXp(event.getEntity().getKiller(), event.getEntity().toString().toLowerCase(), "JOBS_ENTITY_DATA");
+        scalingXp(event.getEntity().getKiller(), event.getEntity().toString().toLowerCase(), "JOBS_ENTITY_DATA", "ENTITY_NAME");
     }
 
 
-    private void scalingXp(Player player, String target_ressource, String tabTarget)throws SQLException {
+
+
+    private void scalingXp(Player player, String target_ressource, String tabTarget, String typeTarget)throws SQLException {
 
         Statement stmt = ConnectionBuilder.getConnection().createStatement();
 
-
         //You must check that the block is present in the database
-        ResultSet result = stmt.executeQuery("SELECT * FROM `"+ tabTarget +"` WHERE `BLOCK_NAME` = '" + target_ressource + "'");
+        ResultSet data_target = stmt.executeQuery("SELECT * FROM `"+ tabTarget +"` WHERE `" + typeTarget + "` = '" + target_ressource + "'");
 
-        if(!result.next()){
-            result.close();
+        if(!data_target.next()){
+            data_target.close();
             stmt.close();
             return;
         }
         //le métier qu'il devra avoir pour obtenir l'xp
-        String job_name = result.getString("JOB_TARGET");
+        String job_name = data_target.getString("JOB_TARGET");
         //l'xp qu'il faudra ajouter au métier du joueur
-        int gain_xp = result.getInt("GAIN_XP");
+        int gain_xp = data_target.getInt("GAIN_XP");
 
         ResultSet jobs_player_result = stmt.executeQuery("SELECT * FROM `JOBS_PLAYER_DATA` " +
                 "WHERE `UUID` = '" + player.getUniqueId() + "' AND `JOB_NAME` = '" + job_name + "'");
         if(!jobs_player_result.next()){
-            result.close();
+            data_target.close();
             jobs_player_result.close();
             stmt.close();
             return;
@@ -76,7 +81,7 @@ public class ActionManager implements Listener {
         if(bossBarPlayer.containsKey(player.getUniqueId())){
             bossBarPlayer.get(player.getUniqueId()).removePlayer(player);
         }
-        BossBar bossBar = Bukkit.createBossBar("§6Niveau §e" + current_level + " " + job_name + " §8: §7" + current_xp + "§8/§7" + xp_need_for_next_level + " §6xp", BarColor.BLUE, BarStyle.SOLID);
+        BossBar bossBar = Bukkit.createBossBar("§6Niveau §e" + current_level + " " + job_name + " §8: §7" + current_xp + "§8/§7" + xp_need_for_next_level + " §e[§6XP§e]", BarColor.BLUE, BarStyle.SOLID);
         bossBar.setProgress((double) current_xp / xp_need_for_next_level);
 
         bossBar.addPlayer(player);
@@ -87,7 +92,7 @@ public class ActionManager implements Listener {
 
 
         jobs_player_result.close();
-        result.close();
+        data_target.close();
         stmt.close();
     }
 
