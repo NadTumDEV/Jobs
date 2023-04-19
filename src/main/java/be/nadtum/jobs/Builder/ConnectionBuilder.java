@@ -3,6 +3,7 @@ package be.nadtum.jobs.Builder;
 import be.nadtum.jobs.Jobs;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +14,7 @@ public class ConnectionBuilder {
     private static Connection connection;
 
     //methode
-    public static Connection setupConnection(FileConfiguration configuration){
+    public static Connection setupConnection(@NotNull FileConfiguration configuration){
 
         try {
             connection = DriverManager.getConnection(
@@ -24,14 +25,12 @@ public class ConnectionBuilder {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        //commit
         return connection;
     }
 
-    public static Connection getConnection() {
-
-
-
-        return connection == null ? setupConnection(Jobs.getINSTANCE().getConfig()) : connection;
+    public static Connection getConnection() throws SQLException {
+        return connection.isValid(5) ? connection : setupConnection(Jobs.getINSTANCE().getConfig());
     }
 
 

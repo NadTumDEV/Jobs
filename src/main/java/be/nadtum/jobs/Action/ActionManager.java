@@ -12,6 +12,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
+import org.bukkit.event.player.PlayerFishEvent;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,21 +27,28 @@ public class ActionManager implements Listener {
 
     //setup event
     @EventHandler
-    public void BreakBlock(BlockBreakEvent event) throws SQLException {
+    public void BreakBlock(@NotNull BlockBreakEvent event) throws SQLException {
         scalingXp(event.getPlayer(), event.getBlock().getType().toString().toLowerCase(), "JOBS_BLOCKS_DATA", "BLOCK_NAME");
     }
 
     @EventHandler
-    public void KillEntity(EntityDeathEvent event) throws SQLException {
+    public void KillEntity(@NotNull EntityDeathEvent event) throws SQLException {
         scalingXp(event.getEntity().getKiller(), event.getEntity().toString().toLowerCase(), "JOBS_ENTITY_DATA", "ENTITY_NAME");
     }
 
+    @EventHandler
+    public void FishEntity(@NotNull PlayerFishEvent event) throws SQLException {
+        scalingXp(event.getPlayer(), event.getCaught().getName().toLowerCase(), "JOBS_ENTITY_DATA", "ENTITY_NAME");
+    }
 
+    private void scalingXp(Player player, String target_ressource, String tabTarget, String typeTarget) throws SQLException {
 
-
-    private void scalingXp(Player player, String target_ressource, String tabTarget, String typeTarget)throws SQLException {
-
-        Statement stmt = ConnectionBuilder.getConnection().createStatement();
+        Statement stmt;
+        try {
+            stmt = ConnectionBuilder.getConnection().createStatement();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         //You must check that the block is present in the database
         ResultSet data_target = stmt.executeQuery("SELECT * FROM `"+ tabTarget +"` WHERE `" + typeTarget + "` = '" + target_ressource + "'");
