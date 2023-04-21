@@ -3,6 +3,7 @@ package be.nadtum.jobs.Action;
 import be.nadtum.jobs.Builder.ConnectionBuilder;
 import be.nadtum.jobs.Jobs;
 import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
@@ -81,6 +82,7 @@ public class ActionManager implements Listener {
         if(xp_need_for_next_level <= current_xp + gain_xp){
             current_level++;
             current_xp = 0;
+            player.playSound(player.getLocation(), Sound.BLOCK_AMETHYST_BLOCK_BREAK, 1, 1);
         }else{
             current_xp = current_xp + gain_xp;
         }
