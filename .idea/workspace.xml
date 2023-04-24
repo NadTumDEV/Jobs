@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fe1b7-1cb7-41fb-beac-e0a38794a79b" name="Changes" comment="ajout d'un son quand un joueur passe au niveau suivant">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Passif/Miner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Passif/Passif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2f5fe1b7-1cb7-41fb-beac-e0a38794a79b" name="Changes" comment="début de la gestion des passifs de chaques joueurs">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/ActionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/ActionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Passif/Miner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Passif/Miner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Passif/Passif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Passif/Passif.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,19 +39,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "NadTum",
-    "last_opened_file_path": "M:/Ressource/Plugin",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.52988505",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;NadTum&quot;,
+    &quot;last_opened_file_path&quot;: &quot;M:/Ressource/Plugin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.52988505&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Jobs package" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -103,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682085446013</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="début de la gestion des passifs de chaques joueurs">
+      <created>1682364855573</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682364855573</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start commit" />
     <MESSAGE value="ajout d'un son quand un joueur passe au niveau suivant" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout d'un son quand un joueur passe au niveau suivant" />
+    <MESSAGE value="début de la gestion des passifs de chaques joueurs" />
+    <option name="LAST_COMMIT_MESSAGE" value="début de la gestion des passifs de chaques joueurs" />
   </component>
 </project>

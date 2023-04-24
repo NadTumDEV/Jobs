@@ -1,17 +1,19 @@
 package be.nadtum.jobs.Passif;
 
+import org.bukkit.entity.Player;
+
 public class Passif {
 
-    public static void select(String job){
+    public static void selectJob(String job, String ability_1, String ability_2, String ability_3, Player player){
 
         switch (job) {
-            case "1":
-                System.out.println("1");
+            case "MINER":
+                Miner.strength(player);
                 break;
-            case "2":
+            case "HUNTER":
                 System.out.println("2");
                 break;
-            case "3":
+            case "WOODHAMMER":
                 System.out.println("3");
                 break;
         }

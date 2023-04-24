@@ -8,7 +8,6 @@ import org.bukkit.Sound;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
-import org.bukkit.entity.Ageable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -107,8 +106,8 @@ public class ActionManager implements Listener {
 
         Bukkit.getScheduler ().runTaskLater (Jobs.getINSTANCE(), () -> bossBar.removePlayer(player), 60);
 
-        //nous allons vérifier quel métier le joueur a via un switch et ainsi donnée les différents passifs
-        Passif.select(job_name);
+        //nous allons vérifier quel métier le joueur a via un switch et ainsi donner les différents passifs
+
 
         jobs_player_result.close();
         data_target.close();
