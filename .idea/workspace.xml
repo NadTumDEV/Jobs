@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5fe1b7-1cb7-41fb-beac-e0a38794a79b" name="Changes" comment="change action par ActionManager&#10;même fonction, la recherche de l'xp à juste été généralisé pour tout type de métiers">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Jobs_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Jobs_jar.xml" afterDir="false" />
+    <list default="true" id="2f5fe1b7-1cb7-41fb-beac-e0a38794a79b" name="Changes" comment="ajout d'un son quand un joueur passe au niveau suivant">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Passif/Miner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Passif/Passif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/ActionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Action/ActionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Mission/MissionBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/nadtum/jobs/Builder/ConnectionBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +47,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "NadTum",
     "last_opened_file_path": "M:/Ressource/Plugin",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.52988505",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -94,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680286419354</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ajout d'un son quand un joueur passe au niveau suivant">
+      <created>1682085446013</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682085446013</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="start commit" />
+    <MESSAGE value="ajout d'un son quand un joueur passe au niveau suivant" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout d'un son quand un joueur passe au niveau suivant" />
   </component>
 </project>

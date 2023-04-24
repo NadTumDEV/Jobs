@@ -2,6 +2,7 @@ package be.nadtum.jobs.Action;
 
 import be.nadtum.jobs.Builder.ConnectionBuilder;
 import be.nadtum.jobs.Jobs;
+import be.nadtum.jobs.Passif.Passif;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.boss.BarColor;
@@ -48,7 +49,9 @@ public class ActionManager implements Listener {
         try {
             stmt = ConnectionBuilder.getConnection().createStatement();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            ConnectionBuilder.setupConnection(Jobs.getINSTANCE().getConfig());
+            Bukkit.getLogger().severe("La connection a échoué, le lien vers la base de données est en cours");
+            return;
         }
 
         //You must check that the block is present in the database
@@ -87,8 +90,11 @@ public class ActionManager implements Listener {
             current_xp = current_xp + gain_xp;
         }
 
+        //on met à jour les données d'xp du joueur
         stmt.executeUpdate("UPDATE `JOBS_PLAYER_DATA` SET `LEVEL`='" + current_level + "',`XP`='" + current_xp + "' WHERE `UUID` = '" + player.getUniqueId() + "' AND `JOB_NAME` = '" + job_name + "'");
 
+
+        //on affiche l'avancement du joueur via le bossBar
         if(bossBarPlayer.containsKey(player.getUniqueId())){
             bossBarPlayer.get(player.getUniqueId()).removePlayer(player);
         }
@@ -101,6 +107,8 @@ public class ActionManager implements Listener {
 
         Bukkit.getScheduler ().runTaskLater (Jobs.getINSTANCE(), () -> bossBar.removePlayer(player), 60);
 
+        //nous allons vérifier quel métier le joueur a via un switch et ainsi donnée les différents passifs
+        Passif.select(job_name);
 
         jobs_player_result.close();
         data_target.close();

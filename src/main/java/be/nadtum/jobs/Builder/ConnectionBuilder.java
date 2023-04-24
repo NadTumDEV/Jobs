@@ -1,9 +1,9 @@
 package be.nadtum.jobs.Builder;
 
+
 import be.nadtum.jobs.Jobs;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.jetbrains.annotations.NotNull;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,7 @@ public class ConnectionBuilder {
     private static Connection connection;
 
     //methode
-    public static Connection setupConnection(@NotNull FileConfiguration configuration){
+    public static Connection setupConnection(FileConfiguration configuration){
 
         try {
             connection = DriverManager.getConnection(
@@ -30,7 +30,7 @@ public class ConnectionBuilder {
     }
 
     public static Connection getConnection() throws SQLException {
-        return connection.isValid(5) ? connection : setupConnection(Jobs.getINSTANCE().getConfig());
+        return !connection.isClosed() ? connection : setupConnection(Jobs.getINSTANCE().getConfig());
     }
 
 
